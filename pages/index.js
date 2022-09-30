@@ -3,7 +3,7 @@ import Image from "next/image";
 import withProviders from "../src/hocs/with-providers";
 import styles from "../styles/Home.module.css";
 
-function Home({ user = {}} = {}) {
+function Home({ user = {} } = {}) {
   return <h1>Welcome {user.name}!</h1>;
 }
 

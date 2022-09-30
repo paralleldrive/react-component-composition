@@ -7,14 +7,15 @@ const log = (x) =>
   });
 
 const withLogger = (Component) => {
-  return function LoggingProvider({ user, ...props }) {
+  return function LoggingProvider({ ...props }) {
+    const { user: id } = props;
     useEffect(() => {
       log({
         type: "mount",
         name: "MyPage",
-        user: user.id,
+        user: id,
       });
-    }, [user]);
+    }, [id]);
     return <Component {...props} />;
   };
 };

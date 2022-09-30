@@ -21,7 +21,7 @@ const Footer = () => {
         .landing-page-footer-wrapper {
           position: absolute;
           height: 75px;
-          background-color: #313131;
+          background-color: white;
           width: 100%;
           bottom: 0;
           display: flex;

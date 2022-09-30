@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <>
       <div className="landing-page-footer-wrapper font-format">
@@ -62,7 +62,7 @@ const Footer = () => {
   );
 };
 
-const BorderDecorations = () => {
+export const BorderDecorations = () => {
   return (
     <>
       <div className="header-decoration">

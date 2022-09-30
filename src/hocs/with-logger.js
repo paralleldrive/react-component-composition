@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const log = (x) =>
+export const log = (x) =>
   console.log({
     timestamp: Date.now(),
     ...x,

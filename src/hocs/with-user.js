@@ -1,6 +1,6 @@
 import cuid from "cuid";
 
-const createUser = ({
+export const createUser = ({
   id = cuid(),
   name = "Anon",
   avatar = "anon.png",
@@ -12,7 +12,6 @@ const createUser = ({
 
 const withUser = (Component) => {
   const user = createUser();
-  console.log(user);
 
   return function WithUser(props) {
     return <Component user={user} {...props} />;

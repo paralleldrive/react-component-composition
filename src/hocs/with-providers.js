@@ -8,7 +8,15 @@ const compose =
   (x) =>
     fns.reduceRight((y, f) => f(y), x);
 
-const withProviders = ({ showFooter = false } = {}) =>
-  compose(withUser, withFeatures, withLogger, withLayout({ showFooter }));
+const withProviders = ({
+  showBorderDecorations = true,
+  showFooter = true,
+} = {}) =>
+  compose(
+    withUser,
+    withFeatures,
+    withLogger,
+    withLayout({ showBorderDecorations, showFooter })
+  );
 
 export default withProviders;

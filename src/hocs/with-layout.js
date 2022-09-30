@@ -1,31 +1,32 @@
 import Image from "next/image";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <>
       <div className="landing-page-footer-wrapper font-format">
         <div className="footer-content">
           <div className="icon-wrapper">
             <a href="https://devanywhere.io/" className="link icon">
-              <Image src="/devanywhere-logo.png" alt="DevAnywhere Logo" />
+              <Image
+                height={20}
+                width={120}
+                src="/devanywhere-logo.png"
+                alt="DevAnywhere Logo"
+              />
             </a>
           </div>
         </div>
-        <div className="footer-border-line"></div>
       </div>
       <style jsx>{`
         .landing-page-footer-wrapper {
-          position: relative;
-          height: 176px;
-          background-color: #313131;
-        }
-
-        .footer-border-line {
           position: absolute;
-          bottom: 0;
-          height: 4px;
+          height: 75px;
+          background-color: white;
           width: 100%;
-          background-color: "green";
+          bottom: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
         .footer-content {
@@ -48,6 +49,9 @@ const Footer = () => {
 
         .icon-wrapper {
           margin-top: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
         .link.icon {
@@ -58,7 +62,7 @@ const Footer = () => {
   );
 };
 
-const BorderDecorations = () => {
+export const BorderDecorations = () => {
   return (
     <>
       <div className="header-decoration">
@@ -82,7 +86,7 @@ const BorderDecorations = () => {
         }
         .line {
           height: 3px;
-          background-color: "green";
+          background-color: #a3d12b;
         }
       `}</style>
     </>

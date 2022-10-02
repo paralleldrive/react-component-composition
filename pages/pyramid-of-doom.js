@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect } from "react";
 import { BorderDecorations, Footer } from "../src/hocs/with-layout";
 import { createUser } from "../src/hocs/with-user";
 import { log } from "../src/hocs/with-logger";
+import WelcomeView from "../src/components/welcome-view";
 
 const userContext = createContext();
 const UserProvider = userContext.Provider;
@@ -15,6 +16,12 @@ const PageComponent = () => {
   const features = useContext(featureContext);
 
   useEffect(() => {
+    fetch("api/hello-world")
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }, []);
+
+  useEffect(() => {
     log({
       type: "mount",
       name: "MyPage",
@@ -25,7 +32,7 @@ const PageComponent = () => {
   return (
     <>
       <BorderDecorations />
-      <h1 style={{ margin: "10px" }}>Welcome {user.name}!</h1>
+      <WelcomeView userName={user.name} />
       <Footer />
     </>
   );

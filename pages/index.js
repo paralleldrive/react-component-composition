@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import withProviders from "../src/hocs/with-providers";
+import WelcomeView from "../src/components/welcome-view";
 
 function Home({ user = {} } = {}) {
-  return <h1 style={{ margin: "10px" }}>Welcome {user.name}!</h1>;
+  return <WelcomeView userName={user.name} />;
 }
 
 export default withProviders()(Home);

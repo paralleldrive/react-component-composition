@@ -16,12 +16,6 @@ const PageComponent = () => {
   const features = useContext(featureContext);
 
   useEffect(() => {
-    fetch("api/hello-world")
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  }, []);
-
-  useEffect(() => {
     log({
       type: "mount",
       name: "MyPage",
